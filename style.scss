@@ -1,0 +1,16 @@
+@import 'styles/breakpoints/base';
+
+// tabletに対応
+@media (max-width: 1000px) {
+  @import 'styles/breakpoints/tablet';
+}
+
+// smart-phoneに対応
+@media (max-width: 600px) {
+  @import 'styles/breakpoints/smart-phone';
+}
+
+// 大画面に対応
+@media (min-width: 1400px) {
+  @import 'styles/breakpoints/big-screen';
+}

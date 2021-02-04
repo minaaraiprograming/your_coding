@@ -1,0 +1,223 @@
+// タブレット端末に適応
+@charset "UTF-8";
+
+.main-title {
+  font-size: 28px;
+}
+
+.top {
+  &__content {
+    width: 87%;
+    height: 50vh;
+    margin-top: 30px;
+    h2 {
+      font-size: 28px;
+    }
+    img {
+      height: 290px;
+      width: 350px;
+    }
+  }
+  &__left {
+    margin-top: 100px;
+  }
+}
+
+.features {
+  &__title {
+    margin-bottom: 40px;
+  }
+  img {
+    width: 40%;
+  }
+  .img1 {
+    margin-right: 20px;
+  }
+  .features__contents {
+    padding: 0;
+    li {
+      margin: 0 auto;
+      width: 90%;
+      h3 {
+        font-size: 24px;
+        margin: 0;
+      }
+      .content {
+        margin: 0;
+        h4 {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 30px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.price {
+  &__title {
+    padding-bottom: 20px;
+  }
+  .price-table {
+    table {
+      width: 90%;
+      max-height: 80px;
+      font-size: 15px;
+      th {
+        width: 40%;
+      }
+    }
+  }
+}
+
+.faq {
+  &__title {
+    padding-bottom: 20px;
+  }
+  &__contents {
+    width: 90%;
+  }
+  .acd-content {
+    font-size: smaller;
+  }
+}
+
+.blog {
+  padding-bottom: 50px;
+  &__title {
+    padding-bottom: 20px;
+  }
+  &__contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    margin: 0 auto;
+    width: 85%;
+  }
+  &__content {
+    margin-bottom: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 300px;
+    width: 300px;
+    img {
+      height: 200px;
+      width: 300px;
+    }
+    h3 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+.contact {
+  &__form {
+    width: 90%;
+    #message {
+      width: 90%;
+    }
+  }
+}
+
+
+/* ===== headerにハンバーガーメニュー設置 ===== */
+/* ===== style.cssの上書き ===== */
+.container {
+  max-width: 100%;
+}
+.header {
+  &__center {
+    display: none;
+  }
+  &__right {
+    display: none;
+  }
+}
+
+/* ===== 機能の実装に必要なCSS ===== */
+
+/* ドロワーナビゲーションの必須スタイル */
+#nav {
+  display: block;
+  position: fixed;
+  right: -180px;
+  top: 0;
+  width: 180px;
+  height: 100%;
+}
+
+/* ドロワーが開かれたときのスタイル */
+.show {
+  transform: translate3d(-180px, 0, 0);
+}
+
+/* 開く・閉じるアニメーション */
+#wrapper, #nav {
+    transition: transform 0.5s;
+}
+
+/* ===== ヘッダーにボタンを配置 ===== */
+.hamburger {
+  align-self: center;
+  margin-right: 14px;
+  margin-top: 10px;
+  color: #fff;
+}
+.hamburger-img {
+  display: inline-block !important;
+  width: 40px;
+  height: 40px;
+}
+.header__left {
+  padding-left: 30px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+.header__contents {
+  width: 100vw
+}
+.hamburger-close {
+  div {
+    color: #fff;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    padding: 0.5em;
+    margin-bottom: 20px;
+    background-color: #000;
+    box-shadow: 0 0 5px 1px #114d60;
+  }
+}
+
+/* ===== 装飾的なCSS ===== */
+
+/* メニュー */
+#nav {
+    padding: 24px 24px 0 24px;
+    background: #000;
+    color: white;
+}
+#nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#nav li a {
+    display: block;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #114d60;
+    text-decoration: none;
+    color: #fff;
+}
+#nav li a:hover {
+    background: #0e3e4d;
+}
